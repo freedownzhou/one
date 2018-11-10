@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="js/popper.js"></script>
+		<script type="text/javascript" src="js/jq.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/zhuye.css"/>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		
+		<title>shop</title>
+	</head>
+	<style>
+		.color_one{
+			background-color: #fffff7;
+			
+		}
+		.container>h5{
+			line-height: 2rem;
+		}
+		.corlor_two{
+			color: #ffcc33;
+		}
+		.top_one{
+			margin-top: 1em;
+		}
+	</style>
+	<body>
+		<div class="container top_one">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="kind.html"><img src="img/1.png" class="img-responsive" width="30px" height="30px" /></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="#"><img src="img/caffe-americano.jpg" class="img-responsive" width="col-sm-12" /></a>
+				</div>
+			</div>
+			</div>
+			<div class="container-fluid color_one" style="height: 27rem;">
+				<div class="container" style="margin-top: -3rem;">
+				<h5 class="corlor_two">手工调制浓缩咖啡</h5>
+				<h3><strong>卡布奇洛&nbsp;(热/冷)</strong></h1>
+				<h5>燕麦牛奶与浓缩咖啡相结合，用丰厚绵密的奶泡盖顶，再撒上肉桂粉或可可粉。</h5><br />
+				<h5>温馨提示：在奶泡消融前，请尽快享用。</h5>
+				</div>
+				<button type="button"  class="btn btn-success" style="float: right;outline:none;"  onclick="MoveBox(this)">加入购买车</button>
+			</div>
+		
+		
+			<div class="footer container navbar-fixed-bottom">
+		<div class="row">
+			<div class="col-xs-3"><a href="#" style="color: #00A862;"><span class="glyphicon glyphicon-certificate"></span><br />主页</a></div>
+			<div class="col-xs-3"><a href="mendian.html"><span class="glyphicon glyphicon-map-marker"></span><br />门店</a></div>
+			<div class="col-xs-3" id="posBtnR"><a href="gowuche.html"><span class="glyphicon glyphicon-shopping-cart"></span><br />购物车</a></div>
+			<div class="col-xs-3"><a href="zhuce.html"><span class="glyphicon glyphicon-user"></span><br />我</a></div>
+		</div>		
+	</div>
+	</body>
+</html>
+
+
+<script>
+function MoveBox(obj) {
+    var divTop = $(obj).offset().top;
+    var divLeft = $(obj).offset().left;
+    $(obj).css({
+        "position": "absolute",
+        "z-index": "0",
+        "left": divLeft + "px",
+        "top": divTop + "px"
+    });
+    $(obj).parent().append($(obj).clone());
+    $(obj).animate({
+        "left": ($("#posBtnR").offset().left) + "px",
+        "top": $("#posBtnR").offset().top + "px",
+        "width": "100px",
+        "height": "40px"
+    }, 500, function() {
+        $(obj).animate({
+            "left": $("#posBtnR").offset().left + "px",
+            "top": $("#posBtnR").offset().top + "px"
+        }, 500);
+        num++;
+        $("#btn_num", parent.document).text(num).animate({
+            'opacity': 1,
+            'marginTop': '0'
+        }, 500, function() {
+            setTimeout(function() {
+                $("#btn_num").hide()
+            }, 8000);
+        });
+    });
+}
+</script>

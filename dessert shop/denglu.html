@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="js/popper.js"></script>
+		<script type="text/javascript" src="js/jq.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/else.css" />
+		<link rel="stylesheet" type="text/css" href="css/zhuye.css"/>
+		<title></title>
+	</head>
+	<style>
+		.heights{	
+			margin-top: 2.1rem;
+			line-height: 10rem;
+			text-align: center;
+			height: 10rem;
+			font-size: 1.8rem;
+		}
+		a{
+			color: black;
+		}
+		.one_1{
+			border: 1px solid #C7DDEF;
+			height: 10rem;
+			border-radius: 4px;
+		}
+		.bg {
+       background: url(img/u=422347854,1799203347&fm=214&gp=0.jpg) no-repeat fixed;
+       background-size:contain;
+      
+		}
+	</style>
+	<body class="bg">
+		<div class="container">
+			<div style="margin-top: 10rem;">
+		<h1 style="text-align: center;"></h1>
+		<div class="container row" style="margin-right: 0px;margin-left: 0px;">
+			<div class="col-6 heights"><div class="one_1" for="qq0"><a href="#" id="qq0"><p>购物车</p></a></div></div>
+			<div class="col-6 heights"><div class="one_1" for="qq1"><a href="#" id="qq1">我的订单</a></div></div>
+			<div class="col-6 heights"><div class="one_1" for="qq2"><a href="#" id="qq2">钱包余额</a></div></div>
+			<div class="col-6 heights"><div class="one_1" for="qq3"><a href="#" id="qq3">收货地址</a></div></div>
+			<div class="col-6 heights"><div class="one_1" for="qq4"><a href="#" id="qq4">全部评价</a></div></div>
+			<div class="col-6 heights"><div class="one_1" for="qq5"><a href="#" id="qq5">会员</a></div></div>
+			
+		</div>
+		</div>
+		</div>
+	
+  	<div class="footer container navbar-fixed-bottom">
+		<div class="row">
+			<div class="col-xs-3"><a href="#"><span class="glyphicon glyphicon-certificate"></span><br />主页</a></div>
+			<div class="col-xs-3"><a href="mendian.html"><span class="glyphicon glyphicon-map-marker"></span><br />门店</a></div>
+			<div class="col-xs-3"><a href="gowuche.html"><span class="glyphicon glyphicon-shopping-cart"></span><br />购物车</a></div>
+			<div class="col-xs-3"><a href="zhuce.html" style="color: #00A862;"><span class="glyphicon glyphicon-user"></span><br />我</a></div>
+		</div>		
+	</div>
+  
+
+	</body>
+</html>
+<script>
+	var da=window.localStorage.getItem("name");
+	document.getElementsByTagName("h1")[0].innerHTML=da;
+</script>

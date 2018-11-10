@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="js/popper.js"></script>
+		<script type="text/javascript" src="js/jq.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/zhuye.css"/>
+		<title></title>
+	</head>
+	<style>
+		.top_one{
+			margin-top: 5rem;
+		}
+		.top_two{
+			margin-top: 1rem;
+			background-color:    #9D9D9D;
+		}
+		.bg {
+       background: url(img/u=422347854,1799203347&fm=214&gp=0.jpg) no-repeat fixed;
+      /*background-color: #E2E6EA;*/
+       background-size:contain;
+		}
+		.input_one{
+			background-color:transparent;
+		}
+	</style>
+	<body class="bg">
+			  <div class="container " style="margin-top: 3rem;display: block;">
+	    	    	<h2 style="text-align: center;">注册</h2>
+	    	  </div>
+		
+		
+		
+		<div class="container ">
+		<form class="form-horizontal" role="form" name="form1" id="submit" action="denglu.html"> <!--onSubmit="return check();"-->
+   			 <div class="form-horizontal row top_one container"  role="form">
+   			 	<div class="form-group col-sm-10">
+   			 	<label for="name" class="col-sm-2">用户名：</label>
+   			 	<div class="col-sm-10">
+   			 	<input type="text"  class="form-control objs input_one" placeholder="请输入名字" required="true" pattern="^([\u4e00-\u9fa5]+|([a-z]+\s?)+)$"  id="name"/>
+   			 	</div>
+   			 	</div>
+   			 	
+   			 	
+ 			 	
+ 			 	<div class="form-group col-sm-10">
+  			    <label for="pwd1" class="col-sm-2">密码:</label>
+    			<div class="col-sm-10"> 
+    			<input type="password" class="form-control objs input_one" id="pwd1" placeholder="Enter password" required="true" pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z\d]{6,16}$">
+    			</div>
+   			 	</div>
+ 			
+ 			 	
+ 			 	<div class="form-group col-sm-10">
+  			    <label for="pwd2" class="col-sm-2">确认密码:</label>
+    			<div class="col-sm-10"> 
+    			<input type="password" class="form-control objs input_one" id="pwd2"   placeholder="again Enter password" required="true" onkeyup="validate()" pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z\d]{6,16}$">
+    			<span id="tishi"></span></input></div>
+   			 	</div>
+ 			 	
+ 			 	<div class="form-group col-sm-10">	
+   			   <label for="email" class="col-sm-2">电子邮件地址:</label>
+   			   <div class="col-sm-10">
+  			    <input type="email" class="form-control objs input_one" id="email" placeholder="Enter email" required="true" pattern="^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$">
+ 				</div>
+   			 	</div><br /><br />
+ 			 	
+ 			 </div>
+ 			 <div class="form-check" style="float: right;">
+ 			     <label class="form-check-label " >
+ 			       <input class="form-check-input" type="checkbox" required="true"> 我已阅读相关条款
+ 			     </label>
+ 			 </div>
+ 			 <br /><br /><br />
+ 			 <div class="col-sm-12">
+   			<button type="submit" id="save"  class="btn btn-primary top_two" style="width: 100%;background-color: #337ab7;color: #fff;border-color: #2e6da4" onclick="check()">立即注册</button>   			
+ 			 </div>
+ 			 
+ 			 
+  </form>
+  </div>
+  
+  
+  	<div class="footer container navbar-fixed-bottom">
+		<div class="row">
+			<div class="col-xs-3"><a href="index.html"><span class="glyphicon glyphicon-certificate"></span><br />主页</a></div>
+			<div class="col-xs-3"><a href="mendian.html"><span class="glyphicon glyphicon-map-marker"></span><br />门店</a></div>
+			<div class="col-xs-3"><a href="gowuche.html"><span class="glyphicon glyphicon-shopping-cart"></span><br />购物车</a></div>
+			<div class="col-xs-3"><a href="zhuce.html" style="color: #00A862;"><span class="glyphicon glyphicon-user"></span><br />我</a></div>
+		</div>		
+	</div>
+	</body>
+	<script>
+		function check() {
+			var is_null=0;
+			
+
+//						if(pwd1 != pwd2) {
+//               
+//                alert("您输入的新密码与确认密码确认不一致,请重新输入。");
+//                document.getElementById("submit").disabled = false;
+//                
+//            }
+
+			var obj=$(".objs");
+			var demo=new Array();
+			for(var i=0;i<obj.length;i++){
+				demo[i]=$("input")[i].value;
+			}
+			if(demo[0]==""||demo[1]==""||demo[2]==""||demo[3]==""){
+				//只要有一个为空就不能跳转
+				alert('内容不能为空');
+				window.sessionStorage.clear();
+				//document.getElementById("submit").disabled = true;
+			}
+//			else{
+//				window.location.href = "http://www.baidu.com";
+//				document.getElementById("submit").disabled = false;
+//			}
+
+		
+         };
+         
+         function validate() {
+              var pwd1 = document.getElementById("pwd1").value;
+              var pwd2 = document.getElementById("pwd2").value;
+//            var pwd1=document.getElementById("pwd1").value;
+//			var pwd2=document.getElementById("pwd2").value;
+//		<!-- 对比两次输入的密码 -->
+              if(pwd1 == pwd2) {
+                  document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
+                  document.getElementById("submit").disabled = false;
+              }
+              else {
+                  document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
+                document.getElementById("submit").disabled = true;
+              }
+         };
+         
+			 document.getElementById("save").onclick=function(){
+				var names=document.getElementById("name").value;
+				window.localStorage.setItem("name",names);
+	}
+	</script>
+</html>

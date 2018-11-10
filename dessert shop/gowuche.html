@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/zhuye.css"/>
+    <link rel="stylesheet" type="text/css" href="css/gowuche.css"/>
+    <!--<link rel="stylesheet" href="css/mui.css" />
+    <script type="text/javascript" src="js/mui.js" ></script>-->
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div class="shop_header navbar-fixed-top">
+			<div>
+				<a href="index.html"><img src="img/back.png" /></a>
+			</div>
+		</div>
+		<div class="shop_body">
+			<div class="container shop_body_1">
+				<div class="shop_body_border">
+				<div class="col-xs-4">
+					<p><strong>披萨冰激凌</strong></p>
+					<img src="img/TB2OqkQif6H8KJjy0FjXXaXepXa_!!2605346506-0-item_pic.jpg_430x430q90.jpg" class="img-responsive">
+				</div>
+				<div class="shop_body_juti col-xs-8">
+					<div class="col-xs-8"><span>12寸</span></div>
+					<div class="col-xs-4"><div class="buyBtn" id="buyBtn"><span class="glyphicon glyphicon-trash"></span></div></div>
+				</div>
+				<div class="shop_body_juti col-xs-8">
+					<div class="col-xs-8">
+						<div class="shulian">
+							<div style="width: 20px;height: 20px;float: left;">
+								<span id="jian" style="text-align: center;display: block;border-right: 1px gainsboro solid;margin-top: -2px;">-</span>
+							</div>
+							<div style="width: 23px;height: 20px;float: left;">
+								<span id="shuliang" style="text-align: center;display: block;">1</span>
+							</div>	
+							<div style="width: 20px;height: 20px;float: left;">
+								<span id="jia" style="text-align: center;display: block;border-left: 1px gainsboro solid;line-height: 20px;">+</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4"><span><strong>¥</strong><strong id="dange">210</strong></span></div>					
+				</div>					
+				</div>
+			</div><br />
+			
+		</div>
+	   <div class="footer_gowuche navbar-fixed-bottom">
+		    <div class="buy">
+		    	<span>结算</span>
+		    </div>	    	
+	        <div class="money">
+	        	<div class="container">
+	        		<span>合计：¥</span><span id="heji"></span>
+	        	</div>	
+	        </div>
+
+	   </div>	
+	</body>
+</html>
+<script>
+	$("#buyBtn").click(function(){
+//		$(".shop_body_1").remove();
+		alert("aa");
+	});
+	
+	
+//  alert(a);
+var jia=$("#jia");
+var jian=$("#jian");
+var shuliang=$("#shuliang");
+var dange=$("#dange");
+var heji=$("#heji").text();
+	jia.click(function(){
+      var oldValue=$("#shuliang").text(); //取出现在的值
+      oldValue++;   //自加1  
+      $("#shuliang").text(oldValue);//将增加后的值付给控件
+      aa();
+   });
+   	jian.click(function(){
+      var oldValue=$("#shuliang").text();
+      oldValue--;
+      $("#shuliang").text(oldValue);
+      if(oldValue<1){
+      	$("#shuliang").text("1");
+      }
+      aa();
+   });
+   function aa(){
+   	heji=$("#heji").text(210*shuliang.text());
+   }
+   aa();
+</script>

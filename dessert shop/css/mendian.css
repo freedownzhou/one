@@ -1,0 +1,74 @@
+.header_mendian{
+	width: 100%;
+	height: 350px;
+	background-color: red;
+}
+.header_mendian .head{
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	box-shadow:0 0 10px #C8C7CC;
+}
+.header_mendian .weizhi{
+	width: 110px;
+	height: 50px;
+/*	background-color: beige;*/
+}
+.header_mendian .weizhi span{
+	line-height: 45px;
+}
+.header_mendian .weizhi_juti{
+	width: 100%;
+	height: 350px;
+	background-color: white;
+	position: absolute;
+	z-index: 100;
+	top: 50px;
+	display: none;
+	/*box-shadow:0 0 10px #C8C7CC;*/
+}
+.header_mendian .weizhi .maplogo{
+	font-size: 20px;
+	color: green;
+}
+#map{
+	width: 100%;
+	height: 300px;
+	/*margin-top: 50px;*/
+}
+.xangxi{
+	width: 100%;
+	height: 1000px;
+	/*background-color: cornflowerblue;*/
+}
+.body_mendian{
+	width: 100%;
+	height: 1000px;
+	padding: 350px 0 0 0;
+}
+.xangxi_maplogo{
+	font-size: 35px;
+	line-height: 125px;
+	margin-left: -5px;
+}
+.list-group-item{
+	width: 100%;
+	/*height: 150px;*/
+}
+.ads{
+	width: 100%;
+}
+.ads_juti{
+	line-height: 120px;
+}
+.LocationFilterLocation {
+  display: inline-block;
+  padding: 3px 10px;
+  background: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: normal; }
+  button{
+  	outline:none;
+  }

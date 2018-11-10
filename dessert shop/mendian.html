@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title></title>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="css/zhuye.css"/>
+        <link rel="stylesheet" type="text/css" href="css/mendian.css"/>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=6cW2lP9KvEirz9c4rkWjR83ZjfyQ0iO4"></script>
+	</head>
+	<body>
+	<div class="header_mendian navbar-fixed-top">
+		    <div class="weizhi_juti">
+		    	<div class="container">
+		    		<br />
+		    		<span>选择其他</span>
+		    		<span>省份</span><span>></span><span>城市</span><br /><br />
+		    		<div class="city">
+		    			<span>A-G</span>
+		    			<button class="LocationFilterLocation">安徽</button>
+		    			<button class="LocationFilterLocation">北京</button>
+		    			<button class="LocationFilterLocation">重庆</button>
+		    			<button class="LocationFilterLocation">福建</button>
+		    			<button class="LocationFilterLocation">甘肃</button>
+		    			<button class="LocationFilterLocation">广东</button>
+		    			<button class="LocationFilterLocation">广西</button>
+		    			<button class="LocationFilterLocation">贵州</button><br /><br />
+		    			<span>H-K</span>
+		    			<button class="LocationFilterLocation">海南</button>
+		    			<button class="LocationFilterLocation">河北</button>
+		    			<button class="LocationFilterLocation">黑龙江</button>
+		    			<button class="LocationFilterLocation">河南</button>
+		    			<button class="LocationFilterLocation">湖北</button>
+		    			<button class="LocationFilterLocation">湖南</button>
+		    			<button class="LocationFilterLocation">内蒙古</button>
+		    			<button class="LocationFilterLocation">江苏</button>
+		    			<button class="LocationFilterLocation">江西</button>
+		    			<button class="LocationFilterLocation">吉林</button><br /><br />
+		    			<span>L-S</span>
+		    			<button class="LocationFilterLocation">辽宁</button>
+		    			<button class="LocationFilterLocation">宁夏</button>
+		    			<button class="LocationFilterLocation">青海</button>
+		    			<button class="LocationFilterLocation">陕西</button>
+		    			<button class="LocationFilterLocation">山东</button>
+		    			<button class="LocationFilterLocation">上海</button>
+		    			<button class="LocationFilterLocation">山西</button>
+		    			<button class="LocationFilterLocation">四川</button><br /><br />
+		    			<span>T-Z</span>
+		    			<button class="LocationFilterLocation">天津</button>
+		    			<button class="LocationFilterLocation">西藏</button>
+		    			<button class="LocationFilterLocation">新疆</button>
+		    			<button class="LocationFilterLocation">云南</button>
+		    			<button class="LocationFilterLocation">浙江</button>	    			
+		    		</div>
+		    	</div>
+		    </div>
+		<div class="head">
+			<div class="container">
+		        <div class="weizhi">
+			        <span class="glyphicon glyphicon-map-marker maplogo"></span>
+			        <span>湖南 长沙</span>
+			        <span class="glyphicon glyphicon-chevron-down"></span>
+		        </div>				
+			</div>
+
+
+		</div>
+	    <div id="map">
+			
+	    </div>
+	</div>
+	<div class="body_mendian">
+	    <div class="xangxi">
+	    	<ul class="list-group">
+                <li class="list-group-item">
+                	<div class="container">
+                		<div class="col-xs-2">
+                			<span class="glyphicon glyphicon-map-marker xangxi_maplogo"></span>
+                		</div>
+                		<div class="col-xs-8">
+                			<div class="ads">
+                			    <p><strong>长沙时代奥特莱斯店</strong></p>
+                			    <p style="color: darkgrey;">长沙市 金州新区 时代奥特莱斯广场1F 工业集中区欧洲北路168号</p>
+                			    <p>14.9 km</p>                				
+                			</div>
+                		</div>
+                		<div class="col-xs-2">
+                			<div class="ads_juti">
+                				<img src="img/icon-info-green.svg" />
+                			</div>
+                		</div>
+                	</div>
+                </li>
+                <li class="list-group-item">
+                	<div class="container">
+                		<div class="col-xs-2">
+                			<span class="glyphicon glyphicon-map-marker xangxi_maplogo"></span>
+                		</div>
+                		<div class="col-xs-8">
+                			<div class="ads">
+                			    <p><strong>长沙时代奥特莱斯店</strong></p>
+                			    <p style="color: darkgrey;">长沙市 金州新区 时代奥特莱斯广场1F 工业集中区欧洲北路168号</p>
+                			    <p>14.9 km</p>                				
+                			</div>
+                		</div>
+                		<div class="col-xs-2">
+                			<div class="ads_juti">
+                				<img src="img/icon-info-green.svg" />
+                			</div>
+                		</div>
+                	</div>                	
+                </li>
+                <!--<li class="list-group-item">图像的数量</li>
+                <li class="list-group-item">24*7 支持</li>
+                <li class="list-group-item">每年更新成本</li>-->
+            </ul>
+	    </div>		
+	</div>
+
+	<div class="footer container navbar-fixed-bottom">
+		<div class="row">
+			<div class="col-xs-3"><a href="index.html"><span class="glyphicon glyphicon-certificate"></span><br />主页</a></div>
+			<div class="col-xs-3"><a href="#" style="color: #00A862;"><span class="glyphicon glyphicon-map-marker"></span><br />门店</a></div>
+			<div class="col-xs-3"><a href="gowuche.html"><span class="glyphicon glyphicon-shopping-cart"></span><br />购物车</a></div>
+			<div class="col-xs-3"><a href="zhuce.html"><span class="glyphicon glyphicon-user"></span><br />我</a></div>
+		</div>		
+	</div>		
+	</body>
+</html>
+<script>
+	var map=new BMap.Map("map");//创建百度地图对象
+	var pt=new BMap.Point(112.694875,28.275173);//创建坐标点
+	map.centerAndZoom(pt,10);//显示中心点和缩放级别
+	var mark=new BMap.Marker(pt);//创建标记
+//	mark.enableDragging();
+
+    var pt2=new BMap.Point(112.867709,28.203918);//创建坐标点
+    var mark2=new BMap.Marker(pt2);//创建标记
+    map.addOverlay(mark2);//将标记叠加层放到地图上
+	
+	map.addOverlay(mark);//将标记叠加层放到地图上
+	map.enableScrollWheelZoom(true);
+	
+	var opts = {type: BMAP_NAVIGATION_CONTROL_SMALL}    
+    map.addControl(new BMap.NavigationControl(opts));//添加放大缩小控件
+    
+    $(".weizhi").click(function(){
+    	$(".weizhi_juti").slideToggle();
+    })
+    
+</script>
